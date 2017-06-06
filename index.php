@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sulabh Bartaula</title>
+	<title>Main Page</title>
 </head>
 <body>
 <h1>Product Entry</h1><hr>

@@ -1,23 +1,26 @@
+<?php
+
+$item_to_search = $_POST['search_item'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Display Page</title>
-	
+	<title>This is search result page</title>
 </head>
 <body>
-<h1>Display Products</h1><hr>
+<h2>Refined Search :</h2><hr>
 <?php
 
 $con = mysqli_connect("localhost","root","","acme");
 
-$query = "select pid,name,price,quantity from product";
+$query = "select pid,name,price,quantity from product where name='$item_to_search'";
 
 $query_result = mysqli_query($con,$query);
 
 echo "<form action='refinedisplay.php' method='POST'>";
-
 echo "<input type='text' name='search_item' />";
-
 echo "<input type='submit' value='Search' />";
 
 echo "</form>";
@@ -82,7 +85,7 @@ echo "</table>";
 
 ?>
 <hr>
-<a href="index.php"><h1>Insert More Product</h1></a>
+
 
 </body>
 </html>
